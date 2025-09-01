@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#00d4ff">
+    <meta name="description" content="FRAGMENT PASSKEY - Generate secure passwords with customizable options - cyberpunk style password generator">
+    <title>FRAGMENT PASSKEY - Secure Password Generator</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-gradient"></div>
+        <div class="grid-overlay"></div>
+        
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="glowing-orbs">
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+        </div>
+        
+        <div class="circuit-lines">
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+            <div class="circuit-line"></div>
+            <div class="circuit-line vertical"></div>
+            <div class="circuit-line vertical"></div>
+        </div>
+        
+        <div class="matrix-rain">
+            <div class="matrix-char">0</div>
+            <div class="matrix-char">1</div>
+            <div class="matrix-char">0</div>
+            <div class="matrix-char">1</div>
+            <div class="matrix-char">0</div>
+            <div class="matrix-char">1</div>
+            <div class="matrix-char">0</div>
+            <div class="matrix-char">1</div>
+            <div class="matrix-char">0</div>
+            <div class="matrix-char">1</div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="fragment-logo">
+                    <div class="logo-spiral">
+                        <div class="spiral-ring ring-1"></div>
+                        <div class="spiral-ring ring-2"></div>
+                        <div class="spiral-ring ring-3"></div>
+                        <div class="logo-center">
+                            <i class="fas fa-key"></i>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="app-title">FRAGMENT PASSKEY</h1>
+            </div>
+            <p class="app-subtitle">Generate secure passwords with futuristic style</p>
+        </header>
+
+        <nav class="tab-navigation">
+            <div class="tab-container">
+                <button class="tab-button active" data-tab="generator">
+                    <i class="fas fa-key"></i>
+                    Generator
+                </button>
+                <button class="tab-button" data-tab="saved">
+                    <i class="fas fa-database"></i>
+                    Saved
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- Password Generator Tab -->
+            <div id="generator-tab" class="tab-content active">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fas fa-cogs"></i>
+                        <h2>Password Configuration</h2>
+                    </div>
+
+                    <form id="password-form">
+                        <!-- Site Name Input -->
+                        <div class="form-group">
+                            <label for="site-name">Site Name</label>
+                            <input type="text" id="site-name" class="cyber-input" 
+                                   placeholder="e.g., Gmail, GitHub, Discord, Steam">
+                        </div>
+
+                        <!-- Password Length -->
+                        <div class="form-group">
+                            <label for="password-length">Password Length: <span id="length-value">12</span></label>
+                            <div class="slider-container">
+                                <div class="slider-labels">
+                                    <span class="slider-label">6</span>
+                                    <span class="slider-label">30</span>
+                                </div>
+                                <input type="range" id="password-length" class="cyber-slider" 
+                                       min="6" max="30" value="12" 
+                                       aria-label="Password length slider"
+                                       role="slider"
+                                       aria-valuemin="6" 
+                                       aria-valuemax="30" 
+                                       aria-valuenow="12">
+                            </div>
+                        </div>
+
+                        <!-- Character Options -->
+                        <div class="form-group">
+                            <label>Character Types</label>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="checkbox" id="uppercase" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="option-text">Uppercase (A-Z)</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="checkbox" id="lowercase" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="option-text">Lowercase (a-z)</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="checkbox" id="numbers" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="option-text">Numbers (0-9)</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="checkbox" id="special" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="option-text">Special (@#$%&*)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Generate Button -->
+                        <button type="submit" class="cyber-button generate-btn" 
+                                aria-label="Generate new password">
+                            <i class="fas fa-bolt" aria-hidden="true"></i>
+                            Generate Password
+                        </button>
+                    </form>
+
+                    <!-- Generated Password Display -->
+                    <div id="password-result" class="password-result hidden">
+                        <label>Generated Password</label>
+                        <div class="password-display">
+                            <code id="generated-password" class="password-text" 
+                                  aria-label="Generated password" 
+                                  role="textbox" 
+                                  readonly></code>
+                            <button id="copy-btn" class="icon-button copy-btn" 
+                                    aria-label="Copy password to clipboard">
+                                <i class="fas fa-copy" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Save Button -->
+                    <button id="save-btn" class="cyber-button save-btn hidden">
+                        Save Password
+                    </button>
+                </div>
+            </div>
+
+            <!-- Saved Passwords Tab -->
+            <div id="saved-tab" class="tab-content">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fas fa-database"></i>
+                        <h2>Saved Passwords</h2>
+                        <span id="password-count" class="password-count">0 passwords saved</span>
+                    </div>
+
+                    <div id="saved-passwords-list" class="saved-passwords-list">
+                        <!-- Saved passwords will be loaded here -->
+                    </div>
+
+                    <div id="empty-state" class="empty-state">
+                        <i class="fas fa-database empty-icon"></i>
+                        <p class="empty-title">No passwords saved yet</p>
+                        <p class="empty-subtitle">Generate and save passwords to see them here</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Password copied to clipboard!</span>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/background.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
