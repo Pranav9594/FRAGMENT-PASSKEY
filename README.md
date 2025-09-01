@@ -3,63 +3,7 @@
 
 
 
-- 🐍 **Python 3.7+** - Backend server
-- 🌶️ **Flask** - Lightweight web framework
-- 🎨 **HTML5/CSS3** - Modern frontend with custom styling
-- ⚡ **JavaScript (ES6+)** - Interactive frontend functionality
-- 🎯 **Font Awesome** - Beautiful icons
-
-## 🚀 Getting Started
-
-### 📋 Prerequisites
-
-- 🐍 Python 3.7 or higher
-- 📦 pip (Python package installer)
-
-### ⚙️ Installation
-
-1. 📥 Clone or download the project files
-2. 🔧 Install Python dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. 🎯 Start the Flask development server:
-   ```bash
-   python app.py
-   ```
-
-4. 🌐 Open your browser and navigate to `http://localhost:5000`
-
-### 🏭 Production Deployment
-
-For production deployment, consider using:
-- 🦄 **Gunicorn** as WSGI server
-- 🌊 **Nginx** as reverse proxy
-- 🔑 Set `app.secret_key` to a secure random value
-- 🛡️ Set `debug=False` in app.run()
-
-## 📖 Usage
-
-### 🎮 Generator Page
-1. 🏷️ Enter a site name (e.g., "Gmail", "GitHub", "Discord", "Steam")
-2. 🎚️ Adjust password length using the slider (6-30 characters)
-3. ☑️ Select character types using checkboxes:
-   - 🔤 Uppercase letters (A-Z)
-   - 🔡 Lowercase letters (a-z)
-   - 🔢 Numbers (0-9)
-   - 🔣 Special characters (@#$%&*)
-4. ⚡ Click "Generate Password"
-5. 📋 Copy the password using the copy button
-6. 💾 Save the password for future reference
-
-### 🗂️ Saved Passwords Page
-- 👀 View all saved passwords organized by site
-- 👁️ Toggle password visibility with the eye icon
-- 📋 Copy passwords to clipboard
-- 🗑️ Delete saved passwords
-- ⏰ See creation timestamps
-
+- 🐍 
 ## 🔌 API Endpoints
 
 - 🏠 `GET /` - Main application page
