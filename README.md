@@ -2,20 +2,6 @@
 <img width="1146" height="774" alt="Screenshot 2025-08-30 025534" src="https://github.com/user-attachments/assets/e4a0da7c-eff0-4bdd-9f31-bf47e972f324" />
 
 
-## A futuristic password generator built with Python Flask featuring a sleek black and blue cyberpunk design with glassmorphism effects and smooth animations. FRAGMENT PASSKEY combines cutting-edge security with stunning visual design. 🚀✨
-
-## ✨ Features
-
-- 🌐 **Site-specific password generation** - Enter site names like "Gmail", "GitHub", etc.
-- 📏 **Customizable password length** - Slider control from 6-30 characters
-- 🔤 **Character type options** - Toggle uppercase, lowercase, numbers, and special characters
-- 🔒 **Cryptographically secure passwords** - Uses Python's `secrets` module for secure random generation
-- 📋 **Copy to clipboard** - One-click copying with visual feedback
-- 💾 **Session-based storage** - Saved passwords persist during browser session
-- 📱 **Responsive design** - Works on desktop, tablet, and mobile
-- 🎭 **Smooth animations** - CSS animations and transitions for modern UX
-
-## 🛠️ Tech Stack
 
 - 🐍 **Python 3.7+** - Backend server
 - 🌶️ **Flask** - Lightweight web framework
